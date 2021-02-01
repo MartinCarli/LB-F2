@@ -1,5 +1,8 @@
 #calcolatrice
 
+#       il programma non e` finito, 
+
+
 
 
 # inizio con fare i vari test (di controllo)
@@ -38,6 +41,7 @@ def trasf_pos(self,p):
 
 ######  inizio a fare le funzioni della calcolatrice
 
+#somma
 def somma(self,numberlist):
     cerca=1
     i=0
@@ -57,7 +61,10 @@ def somma(self,numberlist):
         if(cerca==0):
             print('ATTENZIONE (somma): Il numero deve essere di tipo int o float')
 
+#sottrrazione
 
+
+#divisione
 def divisione(self,numberlist):
     c=0
     n=len(numberlist)
@@ -65,7 +72,7 @@ def divisione(self,numberlist):
         print('ATTENZIONE (divisione): la lista deve contenere soltanto due numeri')
     else:
         elements= list.split(',')
-        if test_i_f(elements[0])==False):
+        if test_i_f(elements[0])==False:
             print('ATTENZIONE (divisione): Il numero deve essere di tipo int o float')
         elif(test_i_f(elements[1]==False)):
             print('ATTENZIONE (divisione): Il numero deve essere di tipo int o float')
@@ -75,7 +82,11 @@ def divisione(self,numberlist):
             c=elements[0]/elements[1]
             return c
 
-    
+#potenza    
+
+#forse ce un errore nel for dove si calcola la potenza 
+#                  ~~~~~~CONTROLLA~~~~~~               #
+
 def potenza(self,numberlist):
     c=0
     n=len(numberlist)
@@ -83,12 +94,41 @@ def potenza(self,numberlist):
         print('ATTENZIONE: la lista deve contenere soltanto due numeri')
     else:
         elements= list.split(',')
-        if test_int(elements[0])==False):
-            print('ATTENZIONE: Il numero deve essere di tipo int')
-        elif(test_i_f(elements[1]==False)):
-            print('ATTENZIONE: Il numero deve essere di tipo int')
-        elif (testzero(elements[1]==True)):
-            print('ATTENZIONE: non si puo` dividere per 0')
+        if test_int(elements[0])==False:
+            print('ATTENZIONE (potenza): La base deve essere di tipo int')
+        elif(test_int(elements[1])==False):
+            print('ATTENZIONE (potenza): L esponente deve essere di tipo int')
+        elif test_pos(elements[1])==False:
+            print('ATTENZIONE (potenza): L esponente deve essere positivo')
+        elif(elements[1]==1):
+            return elements[0]
+        elif(elements[1]==0):
+            return 1
         else:
-            c=elements[0]/elements[1]
-            return c
+            i=elements[1]
+            a=elements[0]
+            for x in range(1,i):
+                elements[0]=elements[0]*a
+            return elements[0]
+        
+#radice
+def radice(self,numberlist):
+    c=0
+    n=len(numberlist)
+    if n>1:
+        print('ATTENZIONE: la lista deve contenere soltanto un numero')
+    else:
+
+        if test_int(numberlist)==False:
+            print('ATTENZIONE (potenza): Il numero deve essere di tipo int')
+
+        elif test_pos(numberlist)==False:
+            print('ATTENZIONE (potenza): Il numero deve essere positivo')
+        else:
+            return sqrt(numberlist)
+
+
+
+es2= [3, 2, 5]
+
+print(somma(es2))
