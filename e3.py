@@ -38,6 +38,7 @@ def trasf_pos(self,p):
 
 ######  inizio a fare le funzioni della calcolatrice
 
+#somma
 def somma(self,numberlist):
     cerca=1
     i=0
@@ -57,7 +58,7 @@ def somma(self,numberlist):
         if(cerca==0):
             print('ATTENZIONE (somma): Il numero deve essere di tipo int o float')
 
-
+#divisione
 def divisione(self,numberlist):
     c=0
     n=len(numberlist)
@@ -75,7 +76,7 @@ def divisione(self,numberlist):
             c=elements[0]/elements[1]
             return c
 
-    
+#potenza    
 def potenza(self,numberlist):
     c=0
     n=len(numberlist)
@@ -84,11 +85,22 @@ def potenza(self,numberlist):
     else:
         elements= list.split(',')
         if test_int(elements[0])==False):
-            print('ATTENZIONE: Il numero deve essere di tipo int')
-        elif(test_i_f(elements[1]==False)):
-            print('ATTENZIONE: Il numero deve essere di tipo int')
-        elif (testzero(elements[1]==True)):
-            print('ATTENZIONE: non si puo` dividere per 0')
+            print('ATTENZIONE (potenza): Il numero deve essere di tipo int')
+        elif(test_int(elements[1]==False)):
+            print('ATTENZIONE (potenza): Il numero deve essere di tipo int')
+        elif(test_pos(elements[1]==False):
+            print('ATTENZIONE (potenza): L` esplonente deve essere positivo')
+        elif(elements[1]==1):
+            return elements[0]
+        elif(elements[1]==0):
+            return 1
         else:
-            c=elements[0]/elements[1]
-            return c
+            i=elements[1]
+            a=elements[0]
+            for x in range(1,i):
+                elements[0]=elements[0]*a
+            return elements[0]
+        
+#radice
+def radice=(slef,numberlist):
+    
