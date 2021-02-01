@@ -132,3 +132,5 @@ def radice(self,numberlist):
 es2= [3, 2, 5]
 
 print(somma(es2))
+
+####errore
