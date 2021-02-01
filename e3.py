@@ -2,7 +2,7 @@
 
 
 
-# inizio con fare i vari test  
+# inizio con fare i vari test (di controllo)
 def testzero(self,a):
     b=False 
     if  a==0:
@@ -36,7 +36,7 @@ def trasf_pos(self,p):
     p= -1 * p
     return p
 
-######  inizio a fare la funzioni della calcolatrice
+######  inizio a fare le funzioni della calcolatrice
 
 def somma(self,numberlist):
     cerca=1
