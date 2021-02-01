@@ -76,7 +76,7 @@ class CSVFile:
             i = i + 1
         return somma
 
-file=CSVFile('l/shampoo_sales.csv')
+file=CSVFile('shampoo_sales.csv')
 data = file.get_data1(1, 37)
 print('\tdata1=', data)
 
