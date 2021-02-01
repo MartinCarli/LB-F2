@@ -1,4 +1,4 @@
-import random
+import random #g
 
 class   Automa:
     def __init__(self, biancheria, calzini, maglia, pantaloni, calzatura):
